@@ -11,14 +11,14 @@ const Card = ({ data }: content) => {
   const cardRef = React.useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const rotateY = useTransform(x, [0, 350], [15, -15]);
-  const rotateX = useTransform(y, [0, 240], [-15, 15]);
+  const rotateY = useTransform(x, [0, 350], [18, -18]);
+  const rotateX = useTransform(y, [0, 240], [-18, 18]);
   const rotateYSpring = useSpring(rotateY);
   const rotateXspring = useSpring(rotateX);
   return (
     <div className="flex flex-col lg:flex-row py-10 px-5 gap-10 justify-center items-start">
       <motion.div
-        className="h-auto w-auto [perspective:1000px]"
+        className="h-auto w-auto [perspective:1100px]"
         onMouseMove={(e) => {
           if (!cardRef.current) return;
           const cardRect = cardRef.current.getBoundingClientRect();
